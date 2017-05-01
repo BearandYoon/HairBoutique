@@ -1,0 +1,141 @@
+<template name="landing">
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    {{#if currentUser}}
+                        <a class="navbar-brand" href="/home">Home</a>
+                    {{else}}
+                        <a class="navbar-brand" href="/login">Log In</a>
+                    {{/if}}
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section  class="container features">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>The Customer Management System<br/> <span class="navy">Returning students to the heart of education</span> </h1>
+                <p>One record, per student, that remains with them throughout their education.</p>
+            </div>
+        </div>
+        
+        <div class="row features-block">
+            <div class="col-lg-6 features-text wow fadeInLeft">
+                <h2>Better Student Outcomes</h2>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <small>Powered by Hair Boutique Cloud</small>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <!--<a href="" class="btn btn-primary">Learn more</a>-->
+            </div>
+            <div class="col-lg-6 text-right wow fadeInRight">
+                <img src="img/landing/dashboard.png" alt="dashboard" class="img-responsive pull-right">
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>Together, we're achieving something amazing</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 features-text">
+                    <small>Feature voting</small>
+                    <h2>Influence what matters most to you</h2>
+                    <i class="fa fa-thumbs-up big-icon pull-right"></i>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="col-lg-5 features-text">
+                    <small>Zero maintenance</small>
+                    <h2>Effortless administration</h2>
+                    <i class="fa fa-bolt big-icon pull-right"></i>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 features-text">
+                    <small>Easy to use</small>
+                    <h2>Intuitive user experience</h2>
+                    <i class="fa fa-television big-icon pull-right"></i>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+                <div class="col-lg-5 features-text">
+                    <small>Fully integrated</small>
+                    <h2>Premium Features</h2>
+                    <i class="fa fa-toggle-on big-icon pull-right"></i>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="contact" class="gray-section contact">
+        <div class="container">
+            <div class="row m-b-lg">
+                <div class="col-lg-12 text-center">
+                    <div class="navy-line"></div>
+                    <h1>Would you like to know more?</h1>
+                    <!--<p>During our beta phase, access to Koru is limited to a small number of participating schools. If you would like to be a part of the beta group, please register your interest.</p>-->
+                </div>
+            </div>
+            <div class="row m-b-lg">
+                <div class="col-lg-3 col-lg-offset-3">
+                    <address>
+                        <strong><span class="navy">Hair Boutique Ltd.</span></strong><br/>
+                        4 Bowsprit Way, Whitby,<br/>
+                        Porirua, 5024<br/>
+                        <abbr title="Phone">P:</abbr> 022 462 6528
+                    </address>
+                </div>
+                <div class="col-lg-4">
+                    <p class="text-color">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                    <p class="text-color">
+                        If you would like to be a part of the beta group, please get in touch and we'll help you every step of the way.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="mailto:john@smith.com" class="btn btn-primary">Send us mail</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                    <p><strong>&copy; 2017 Hair Boutique Ltd</strong><br/>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
