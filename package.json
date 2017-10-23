@@ -1,7 +1,7 @@
 {
   "name": "Koru",
   "version": "0.0.1",
-  "description": "Koru Student Management System.",
+  "description": "User Management System.",
   "private": true,
   "scripts": {
     "start:dev": "ROOT_URL=http://localhost:4010/ MONGO_URL=mongodb://localhost:27017/hairboutique meteor --settings private/settings.json --port 4010"
