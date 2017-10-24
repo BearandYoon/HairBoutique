@@ -1,4 +1,8 @@
-<template name="home">
+<template name="myBlog">
+
+    <!-- Page heading -->
+    {{> pageHeading title='Blog' category='My Blog'  categoryLink=''}}
+
     <div class="wrapper wrapper-content animated fadeInRight blog">
         <div class="row">
             <div class="col-lg-4">
@@ -287,21 +291,4 @@
             </div>
         </div>
     </div>
-</template>
-
-<template name="notificationList">
-    <ul class="list-group clear-list m-t">
-        {{#each this}}
-            {{>notificationElement}}
-        {{/each}}
-    </ul>
-</template>
-
-<template name="notificationElement">
-    <li class="list-group-item">
-        <span class="pull-right">
-            {{time}}
-        </span>
-        <span class="label label-{{labelClass}}">{{number}}</span> {{content}}
-    </li>
 </template>

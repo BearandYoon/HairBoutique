@@ -44,6 +44,21 @@
                         </a>
                     </li>
                 {{/if}}
+
+                {{#if isGeneralUser }}
+                    <li class="{{isActivePath path='/home'}}">
+                        <a href="/home">
+                            <i class="fa fa-dashboard"></i>
+                            <span class="nav-label" data-i18n="nav.home">Home</span>
+                        </a>
+                    </li>
+                    <li class="{{isActivePath regex='/my_blog'}}">
+                        <a href="/my_blog">
+                            <i class="fa fa-book"></i>
+                            <span class="nav-label" data-i18n="nav.users">My Blog</span>
+                        </a>
+                    </li>
+                {{/if}}
             </ul>
         </div>
     </nav>

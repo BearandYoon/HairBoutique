@@ -10,6 +10,11 @@ Template.registerHelper( 'isSuperAdmin', () => {
     return (Meteor.userId() &&  Roles.userIsInRole(Meteor.userId(), [ROLES.ADMIN], Roles.GLOBAL_GROUP));
 });
 
+Template.registerHelper( 'isGeneralUser', () => {
+    console.log('isGeneralUser = ', Meteor.userId(), Roles.userIsInRole(Meteor.userId(), [ROLES.GENERAL], Roles.GLOBAL_GROUP));
+    return (Meteor.userId() &&  Roles.userIsInRole(Meteor.userId(), [ROLES.GENERAL], Roles.GLOBAL_GROUP));
+});
+
 Template.registerHelper( 'userTypeStringify', () => {
     if(!Meteor.userId())
     {

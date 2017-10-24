@@ -57,7 +57,7 @@ export const registerUser = new ValidatedMethod({
         console.log("New User ID: " + newUserId);
         if(Meteor.isServer) {
             if (newUserId) {
-                Roles.addUsersToRoles(newUserId, [ROLES.CUSTOMER], Roles.GLOBAL_GROUP);
+                Roles.addUsersToRoles(newUserId, [ROLES.GENERAL], Roles.GLOBAL_GROUP);
             }
             return newUserId;
         }
@@ -109,7 +109,7 @@ export const insertUser = new ValidatedMethod({
             console.log("New User ID: " + newUserId);
 
             if (newUserId && role) {
-                Roles.addUsersToRoles(newUserId, [ROLES.CUSTOMER], Roles.GLOBAL_GROUP);
+                Roles.addUsersToRoles(newUserId, [ROLES.GENERAL], Roles.GLOBAL_GROUP);
             }
             return newUserId;
         }

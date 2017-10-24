@@ -28,6 +28,8 @@ import '../../ui/pages/customers/customers.js';
 import '../../ui/pages/customers/editCustomer.js';
 import '../../ui/pages/customer/customer.js';
 
+import '../../ui/pages/myBlog/myBlog.js';
+
 import { Roles } from 'meteor/alanning:roles';
 import { ROLES } from '/imports/api/users/users.js';
 
@@ -137,6 +139,11 @@ LoggedinGroup.route('/settings', {
     }
 });
 
+LoggedinGroup.route('/my_blog', {
+    action: function() {
+        BlazeLayout.render("mainLayout", {content: "myBlog"});
+    }
+});
 
 AdminGroup.route('/customers', {
     action: function() {

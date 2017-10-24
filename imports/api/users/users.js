@@ -66,7 +66,7 @@ export const UserSchema = Schema.User;
 
 export const ROLES = {
     ADMIN: "admin",
-    CUSTOMER: 'customer'
+    GENERAL: 'general'
 };
 
 // Deny all client-side updates to user documents

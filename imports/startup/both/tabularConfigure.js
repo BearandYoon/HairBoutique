@@ -35,6 +35,6 @@ TabularTables.Customers = new Tabular.Table({
         }
     ],
     selector() {
-        return {'roles.__global_roles__': ROLES.CUSTOMER};
+        return {'roles.__global_roles__': ROLES.GENERAL};
     }
 });

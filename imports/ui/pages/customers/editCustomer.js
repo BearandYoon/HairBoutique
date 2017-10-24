@@ -64,7 +64,7 @@ Template.editCustomer.events({
         if(event.target.role) {
             userObj.role = event.target.role.value;
         } else {
-            userObj.role = ROLES.CUSTOMER;
+            userObj.role = ROLES.GENERAL;
         }
 
         if(password && password != "") {
