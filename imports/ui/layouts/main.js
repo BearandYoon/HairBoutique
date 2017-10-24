@@ -23,7 +23,6 @@ Template.mainLayout.rendered = function(){
     });
 };
 
-
 Template.mainLayout.destroyed = function(){
     // Remove special color for blank layout
     if(!Meteor.userId()) {
