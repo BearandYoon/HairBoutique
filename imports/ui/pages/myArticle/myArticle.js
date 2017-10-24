@@ -1,4 +1,4 @@
-import './myBlog.html'
+import './myArticle.html'
 
 import { Roles } from 'meteor/alanning:roles';
 import { ROLES } from '/imports/api/users/users.js';
