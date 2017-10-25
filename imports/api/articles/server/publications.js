@@ -11,6 +11,7 @@ Meteor.publish("articles", function () {
         this.ready();
         return;
     }
+    console.log('================ ', this.userId);
     return Articles.find({});
 });
 

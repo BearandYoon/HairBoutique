@@ -3,6 +3,7 @@ import { Factory } from 'meteor/dburles:factory';
 import { Accounts } from 'meteor/accounts-base';
 import { UserSchema, ROLES } from '../../api/users/users.js';
 import { registerUser } from '/imports/api/users/methods.js';
+import { insertArticle } from "../../api/articles/methods";
 import { Roles } from 'meteor/alanning:roles';
 import faker from 'faker';
 
@@ -124,6 +125,14 @@ Meteor.methods({
                 password: "pass"
             };
             const customerId9 = registerUser.call(customer9);
+
+            const article1 = {
+                title: "New Article",
+                content: "This is a Article Content.",
+                authorId: "fidw53tNDHFb2ga4F"
+            };
+            const articleId1 = insertArticle.call(article1);
+            console.log('fixture-articleId1 = ', articleId1);
         } catch(err) {
             console.log(err);
         }

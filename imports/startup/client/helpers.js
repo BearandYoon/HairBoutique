@@ -11,7 +11,6 @@ Template.registerHelper( 'isSuperAdmin', () => {
 });
 
 Template.registerHelper( 'isGeneralUser', () => {
-    console.log('isGeneralUser = ', Meteor.userId(), Roles.userIsInRole(Meteor.userId(), [ROLES.GENERAL], Roles.GLOBAL_GROUP));
     return (Meteor.userId() &&  Roles.userIsInRole(Meteor.userId(), [ROLES.GENERAL], Roles.GLOBAL_GROUP));
 });
 

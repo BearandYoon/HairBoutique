@@ -44,8 +44,10 @@ Tracker.autorun(() => {
 });
 
 export const LoggedInSubs = new SubsManager();
+export const ArticleSubs = new SubsManager();
 
 let PublicGroup = FlowRouter.group();
+
 let LoggedinGroup = FlowRouter.group({
     triggersEnter: [function(context, redirect) {
         if (!Meteor.userId()) {
@@ -116,6 +118,9 @@ NonLoggedinGroup.route('/register', {
 LoggedinGroup.route('/home', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "home"});
+    },
+    subscriptions: function(params, queryParams) {
+        this.register('articles', ArticleSubs.subscribe('articles'));
     }
 });
 
@@ -142,7 +147,10 @@ LoggedinGroup.route('/settings', {
 LoggedinGroup.route('/myArticles', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "myArticles"});
-    }
+    },
+    // subscriptions: function(params, queryParams) {
+    //     this.register('articles', ArticleSubs.subscribe('articles'));
+    // }
 });
 
 AdminGroup.route('/customers', {

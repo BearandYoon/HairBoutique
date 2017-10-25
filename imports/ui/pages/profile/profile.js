@@ -21,4 +21,4 @@ Template.profile.events({
             }
         });
     }
-})
+});
