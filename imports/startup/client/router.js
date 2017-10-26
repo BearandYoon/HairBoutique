@@ -148,9 +148,9 @@ LoggedinGroup.route('/myArticles', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "myArticles"});
     },
-    // subscriptions: function(params, queryParams) {
-    //     this.register('articles', ArticleSubs.subscribe('articles'));
-    // }
+    subscriptions: function(params, queryParams) {
+        this.register('articles', ArticleSubs.subscribe('articles'));
+    }
 });
 
 AdminGroup.route('/customers', {

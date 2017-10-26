@@ -19,7 +19,6 @@ Template.home.rendered = function(){
 Template.home.onRendered(function homePageOnRendered() {
     this.autorun(() => {
         if (this.subscriptionsReady()) {
-            console.log("homePage - subscriptionsReady = ", Articles.find().fetch());
             this.state.set('articles', Articles.find().fetch());
         }
     });
