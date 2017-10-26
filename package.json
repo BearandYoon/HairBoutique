@@ -16,7 +16,8 @@
     "datatables.net-bs": "^1.10.13",
     "express": "^4.14.1",
     "faker": "^3.0.1",
-    "jquery": "1.12.4"
+    "jquery": "1.12.4",
+    "moment": "^2.19.1"
   },
   "devDependencies": {
     "chimp": "^0.41.2"
