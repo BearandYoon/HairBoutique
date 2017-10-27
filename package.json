@@ -13,10 +13,11 @@
     "bcrypt": "^0.8.7",
     "body-parser": "^1.16.0",
     "core-js": "2.4.0",
-    "datatables.net-bs": "^1.10.13",
+    "datatables.net-bs": "^1.10.16",
     "express": "^4.14.1",
     "faker": "^3.0.1",
     "jquery": "1.12.4",
+    "masonry-layout": "^4.2.0",
     "moment": "^2.19.1"
   },
   "devDependencies": {

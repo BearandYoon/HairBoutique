@@ -48,7 +48,7 @@ export const ArticleSubs = new SubsManager();
 
 let PublicGroup = FlowRouter.group();
 
-let LoggedinGroup = FlowRouter.group({
+let LoggedInGroup = FlowRouter.group({
     triggersEnter: [function(context, redirect) {
         if (!Meteor.userId()) {
             let route = FlowRouter.current();
@@ -61,7 +61,7 @@ let LoggedinGroup = FlowRouter.group({
     }]
 });
 
-let NonLoggedinGroup = FlowRouter.group({
+let NonLoggedInGroup = FlowRouter.group({
     triggersEnter: [function(context, redirect) {
         if (Meteor.userId()) {
             redirect('/home');
@@ -95,27 +95,27 @@ PublicGroup.route('/', {
 });
 
 
-NonLoggedinGroup.route('/login', {
+NonLoggedInGroup.route('/login', {
     action: function() {
         BlazeLayout.render("mainLayout", {not_logged_content: "login"});
     }
 });
 
 
-NonLoggedinGroup.route('/forgotPassword', {
+NonLoggedInGroup.route('/forgotPassword', {
     action: function() {
         BlazeLayout.render("mainLayout", {not_logged_content: "forgotPassword"});
     }
 });
 
 
-NonLoggedinGroup.route('/register', {
+NonLoggedInGroup.route('/register', {
     action: function() {
         BlazeLayout.render("mainLayout", {not_logged_content: "register"});
     }
 });
 
-LoggedinGroup.route('/home', {
+LoggedInGroup.route('/home', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "home"});
     },
@@ -125,26 +125,26 @@ LoggedinGroup.route('/home', {
 });
 
 
-LoggedinGroup.route('/dashboard', {
+LoggedInGroup.route('/dashboard', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "dashboard"});
     }
 });
 
-LoggedinGroup.route('/profile', {
+LoggedInGroup.route('/profile', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "profile"});
     }
 });
 
 
-LoggedinGroup.route('/settings', {
+LoggedInGroup.route('/settings', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "settings"});
     }
 });
 
-LoggedinGroup.route('/myArticles', {
+LoggedInGroup.route('/myArticles', {
     action: function() {
         BlazeLayout.render("mainLayout", {content: "myArticles"});
     },

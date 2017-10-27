@@ -1,7 +1,8 @@
 import './home.html';
 import { Roles } from 'meteor/alanning:roles';
 import { ROLES } from '/imports/api/users/users.js';
-import { $ } from 'meteor/jquery';
+let Masonry = require('masonry-layout');
+
 import { updateArticle } from '../../../api/articles/methods.js';
 import { Articles } from "../../../api/articles/articles";
 import { Modal } from 'meteor/peppelg:bootstrap-3-modal';
@@ -15,8 +16,7 @@ Template.home.onCreated(function homePageOnCreated() {
 Template.home.rendered = function(){
     $('.ladda-button').ladda();
 
-    $('.grid').masonry({
-        // options
+    let msnry = new Masonry( '.grid', {
         itemSelector: '.grid-item',
         columnWidth: 300,
         gutter: 25
