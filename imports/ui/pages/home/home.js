@@ -17,7 +17,7 @@ Template.home.onCreated(function homePageOnCreated() {
     window.scrollTo(0, 0);
     this.autorun(() => {
         if (this.subscriptionsReady()) {
-            this.state.set('articles', Articles.find({authorId: Meteor.userId()}).fetch());
+            this.state.set('articles', Articles.find().fetch());
         }
     });
 });
