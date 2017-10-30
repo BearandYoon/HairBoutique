@@ -38,15 +38,33 @@ Template.myArticles.onRendered(function myArticlesPageOnRendered() {
     });
 });
 
-Template.myArticles.events({});
+Template.myArticles.events({
+    // 'click .add-article': function(event)
+    // {
+    //     FlowRouter.go("/students/new");
+    // },
+});
 
 Template.myArticles.helpers({
     articles() {
         const instance = Template.instance();
-        let myArticles = instance.state.get('articles');
-        if (myArticles) {
-            myArticles.map(function (article) {
+        let myArticles = {
+            articles: instance.state.get('articles'),
+            totalLiker: 0,
+            totalViewer: 0,
+            sharedArticles: 0,
+            privateArticles: 0
+        };
+        if (myArticles.articles) {
+            myArticles.articles.map(function (article) {
                 article.formatDate = monthNames[article.createdAt.getMonth()] + " " + article.createdAt.getDate() + ", " + article.createdAt.getFullYear();
+                myArticles.totalLiker += article.likerCount;
+                myArticles.totalViewer += article.viewerCount;
+                if (article.isShared) {
+                    myArticles.sharedArticles++;
+                } else {
+                    myArticles.privateArticles++;
+                }
             })
         }
         return myArticles;

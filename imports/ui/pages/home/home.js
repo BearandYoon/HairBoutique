@@ -43,13 +43,26 @@ Template.home.events({});
 Template.home.helpers({
     articles() {
         const instance = Template.instance();
-        let myArticles = instance.state.get('articles');
-        if (myArticles) {
-            myArticles.map(function (article) {
+        let articles = {
+            articles: instance.state.get('articles'),
+            totalLiker: 0,
+            totalViewer: 0,
+            sharedArticles: 0,
+            privateArticles: 0
+        };
+        if (articles.articles) {
+            articles.articles.map(function (article) {
                 article.formatDate = monthNames[article.createdAt.getMonth()] + " " + article.createdAt.getDate() + ", " + article.createdAt.getFullYear();
+                articles.totalLiker += article.likerCount;
+                articles.totalViewer += article.viewerCount;
+                if (article.isShared) {
+                    articles.sharedArticles++;
+                } else {
+                    articles.privateArticles++;
+                }
             })
         }
-        return myArticles;
+        return articles;
     },
     userInfo() {
         return Meteor.user();

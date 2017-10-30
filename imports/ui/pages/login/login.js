@@ -8,9 +8,7 @@ Template.login.rendered = function(){
 };
 
 Template.login.events({
-
     'submit #form-login': function(event){
-
         event.preventDefault();
         let email = event.target.email.value;
         let passwd = event.target.password.value;
