@@ -39,10 +39,31 @@ Template.myArticles.onRendered(function myArticlesPageOnRendered() {
 });
 
 Template.myArticles.events({
-    // 'click .add-article': function(event)
-    // {
-    //     FlowRouter.go("/students/new");
-    // },
+    'submit #new-article-form': function(event){
+        event.preventDefault();
+        let email = event.target.title.value;
+        let passwd = event.target.content.value;
+        $('.ladda-button').ladda('start');
+
+        // console.log(event.target.shared.value);
+        console.log(event.target.privateArticles);
+        // Meteor.loginWithPassword(email, passwd, function(error){
+        //     $('.ladda-button').ladda('stop');
+        //
+        //     if (error){
+        //         console.log("login failed");
+        //         swal({
+        //             title: "Login Failed!",
+        //             text: "Wrong username or password. Please try again!",
+        //             type: "warning"
+        //         });
+        //         //template.find('#form-messages').html(error.reason);
+        //     }else{
+        //         console.log("login succeed");
+        //         FlowRouter.go("/home");
+        //     }
+        // });
+    },
 });
 
 Template.myArticles.helpers({
